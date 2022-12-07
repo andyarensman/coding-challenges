@@ -1,3 +1,3 @@
 ## Various coding challenges
 
-freeCodeCamp, Youtube, other
+This is a repo to store various coding problems from freeCodeCamp, Youtube, and more.
