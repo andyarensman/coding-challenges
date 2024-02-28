@@ -54,4 +54,30 @@ Common Run Times:
 - O(n2). Example: A slow sorting algorithm, like selection sort.
 - O(n!). Example: A really slow algorithm, like the traveling salesperson.
 
-pg21
+## Selection Sort
+
+### How Memory Works
+
+It's basically like a giant set of drawers, and each drawer has an address.
+
+### Arrays and Linked Lists
+
+Using an array means all your tasks are stored contiguously (right next to each other) in memory. If you’re out of space and need to move to a new spot in memory every time, adding a new item will be really slow.
+
+With linked lists, your items can be anywhere in memory. Each item stores the address of the next item in the list. A bunch of random memory addresses are linked together. With linked lists, you never have to move your items. A linked list is like saying, “Let’s split up and watch the movie.” If there’s space in memory, you have space for your linked list.
+
+Linked lists are great if you’re going to read all the items one at a time: you can read one item, follow
+the address to the next item, and so on. But if you’re going to keep jumping around, linked lists are terrible.
+
+With arrays, you know the address for every item.
+
+Array Reading: O(1) - random access
+Array Insertion: O(n)
+Array Deletion: O(n)
+Lists Reading: O(n) - sequential access
+Lists Insertion: O(1)
+Lists Deletion: O(1) (only if you know the location, like first or last)
+
+Arrays are good for reading, linked lists are good for insertion and deletion.
+
+p32
