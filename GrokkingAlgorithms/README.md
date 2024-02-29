@@ -80,4 +80,10 @@ Lists Deletion: O(1) (only if you know the location, like first or last)
 
 Arrays are good for reading, linked lists are good for insertion and deletion.
 
-p32
+### Selection Sort
+
+You go through the the list over and over again, looking for the highest value (or whatever you're sorting by). The runtime is then O(n<sup>2</sup>)
+
+## Recursion
+
+p37
