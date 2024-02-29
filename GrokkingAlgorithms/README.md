@@ -86,4 +86,65 @@ You go through the the list over and over again, looking for the highest value (
 
 ## Recursion
 
-p37
+### Recursion
+
+When a function calls itself.
+
+This:
+
+```python
+def look_for_key(main_box):
+  pile = main_box.make_a_pile_to_look_through()
+  while pile is not empty:
+    box = pile.grab_a_box()
+    for item in box:
+      if item.is_a_box():
+        pile.append(item)
+      elif item.is_a_key():
+        print “found the key!”
+```
+
+vs this:
+
+```python
+def look_for_key(box):
+  for item in box:
+    if item.is_a_box():
+      look_for_key(item)
+    elif item.is_a_key():
+      print “found the key!”
+```
+
+Recursion is used when it makes the solution clearer. “Loops may achieve a performance gain for your program. Recursion may achieve a performance gain for your programmer. Choose which is more important in your situation!”
+
+### Base Case and Recursive Case
+
+Every recursive function has a base case and a recursive case. The base case is what prevents the function from looping forever.
+
+### The Stack
+
+Push = add to top
+Pop = remove from top and read it
+
+The call stack is how your computer keeps track of what's happening in your function. It remembers what happened and won't finish until the top part is done.
+
+When you call a function from another function, the calling function is paused in a partially completed state.
+
+```python
+def fact(x):
+  if x == 1:
+    return 1
+  else:
+    return x * fact(x-1)
+```
+
+Each call has its own copy of x. As it goes down, it gets smaller, then comes back up to do the multiplication with previous versions of x.
+
+Using the stack is convenient, but there’s a cost: saving all that info can take up a lot of memory. Each of those function calls takes up some memory, and when your stack is too tall, that means your computer is saving information for many function calls. At that point, you have two options:
+
+- You can rewrite your code to use a loop instead.
+- You can use something called tail recursion. That’s an advanced recursion topic that is out of the scope of this book. It’s also only supported by some languages, not all.
+
+## Quicksort
+
+p51
