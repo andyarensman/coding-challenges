@@ -147,4 +147,15 @@ Using the stack is convenient, but there’s a cost: saving all that info can ta
 
 ## Quicksort
 
-p51
+### Divide and Conquer
+
+They are recursive algorithms that have two steps:
+
+1. Figure out the base case. This should be the simplest possible case.
+2. Divide or decrease your problem until it becomes the base case.
+
+Euclid's algorithm: https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
+
+When you're writing a recursive function involving an array, the base case is often an empty array or an array with one element.
+
+p.59
